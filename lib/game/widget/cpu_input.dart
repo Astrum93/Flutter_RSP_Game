@@ -9,10 +9,16 @@ class CpuInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: InputCard(
-        child: getCpuInput(),
-      ),
+    return Row(
+      children: [
+        const Expanded(child: SizedBox.shrink()),
+        Expanded(
+          child: InputCard(
+            child: getCpuInput(),
+          ),
+        ),
+        const Expanded(child: SizedBox.shrink()),
+      ],
     );
   }
 
@@ -21,8 +27,7 @@ class CpuInput extends StatelessWidget {
       return Image.asset(cpuInput.path);
     }
     return const SizedBox(
-      width: 64,
-      height: 64,
+      height: 80,
       child: Center(
         child: Text(
           '?',

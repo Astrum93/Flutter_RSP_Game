@@ -1,27 +1,9 @@
 import 'package:flutter/material.dart';
 
 class InputCard extends StatelessWidget {
-  final VoidCallback? callback;
   final Widget child;
 
-  const InputCard({this.callback, required this.child, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: InkWell(
-          onTap: () => callback?.call(), child: InputContents(child: child)),
-    );
-  }
-}
-
-class InputContents extends StatelessWidget {
-  const InputContents({
-    super.key,
-    required this.child,
-  });
-
-  final Widget child;
+  const InputCard({required this.child, super.key});
 
   @override
   Widget build(BuildContext context) {

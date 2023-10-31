@@ -14,6 +14,7 @@ class RSPApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: const Text('가위 바위 보!'),
         ),
         body: const GameBody(),
